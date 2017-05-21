@@ -8,15 +8,17 @@ matrix:
     env: SCRIPT=test
   - node_js: "6"
     env: SCRIPT=test
+  - node_js: "5"
+    env: SCRIPT=test
+  - node_js: "4"
+    env: SCRIPT=test
 
 preinstall:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH="$HOME/.yarn/bin:$PATH"
-  - yarn config set spin false
-  - yarn config set progress false
+  - npm config set spin false
+  - npm config set progress false
 
 install:
-  - yarn
+  - npm install
 
 test:
   - if [[ "$SCRIPT" ]]; then npm run-script $SCRIPT; fi

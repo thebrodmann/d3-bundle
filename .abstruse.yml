@@ -4,13 +4,7 @@ git:
   depth: 3
 
 matrix:
-  - node_js: "7"
-    env: SCRIPT=test
-  - node_js: "6"
-    env: SCRIPT=test
-  - node_js: "5"
-    env: SCRIPT=test
-  - node_js: "4"
+  - node_js: "8"
     env: SCRIPT=test
 
 preinstall:

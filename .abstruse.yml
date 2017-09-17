@@ -1,0 +1,15 @@
+image: abstruse
+
+matrix:
+  - env: SCRIPT=test, NODE_VERSION=8
+
+preinstall:
+  - nvm install $NODE_VERSION
+  - npm config set spin false
+  - npm config set progress false
+
+install:
+  - npm install
+
+test:
+  - if [[ "$SCRIPT" ]]; then npm run-script $SCRIPT; fi

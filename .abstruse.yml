@@ -1,4 +1,4 @@
-image: abstruse
+image: bleenco/abstruse
 
 matrix:
   - env: SCRIPT=test NODE_VERSION=8
